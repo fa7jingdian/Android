@@ -1,15 +1,43 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
+# 合并本地和远程的忽略规则
+
+# Gradle 相关（远程）
+.gradle/
+build/
 /captures
 .externalNativeBuild
 .cxx
+
+# 本地配置文件（双方都有，保留）
 local.properties
+
+# 日志和系统文件（远程）
+*.log
+.DS_Store  # 本地的 macOS 系统文件，保留
+
+# Android Studio 生成文件（合并双方）
+*.iml
+.idea/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# 构建输出（远程）
+*.aab
+*.apk
+output-metadata.json
+
+# 密钥文件（远程，安全相关，必须保留）
+*.jks
+*.keystore
+
+# Google 服务配置（远程）
+google-services.json
+
+# 性能分析文件（远程）
+*.hprof
